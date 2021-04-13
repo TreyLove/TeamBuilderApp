@@ -89,12 +89,12 @@ const template = (manager, engineer, intern) => {
        <div class="card-head">
            <h2>${e.name}</h2>
            <h2>Manager</h2>
-           <img src="" alt="">
+           <img src="../images/manager.png" alt="">
        </div>
 
        <ul>
            
-           <li><b>Email: </b>${e.email}</li>
+           <li><b>Email: </b><a href="mailto:${e.email}">${e.email}</a></li>
            <li><b>ID: </b>${e.id}</li>
            <li><b>Office Number: </b>${e.office}</li>
        </ul>
@@ -111,14 +111,14 @@ const template = (manager, engineer, intern) => {
         <div class="card-head">
             <h2>${e.name}</h2>
             <h2>Engineer</h2>
-            <img src="" alt="">
+            <img src="../images/administrator-developer.png" alt="">
         </div>
 
         <ul>
             
-            <li><b>Email: </b>${e.email}</li>
+            <li><b>Email: </b><a href="mailto:${e.email}">${e.email}</a></li>
             <li><b>ID: </b>${e.id}</li>
-            <li><b>GitHub Page </b>${e.gitHub}</li>
+            <li><b>GitHub Page: </b><a href="${e.gitHub}">${e.gitHub}</a></li>
         </ul>
 
     </div>`
@@ -130,12 +130,12 @@ const template = (manager, engineer, intern) => {
         <div class="card-head">
             <h2>${e.name}</h2>
             <h2>Intern</h2>
-            <img src="" alt="">
+            <img src="../images/education-study.png" alt="">
         </div>
 
         <ul>
             
-            <li><b>Email: </b>${e.email}</li>
+            <li><b>Email: </b><a href="mailto:${e.email}">${e.email}</a></li>
             <li><b>ID: </b>${e.id}</li>
             <li><b>School: </b>${e.school}</li>
         </ul>
