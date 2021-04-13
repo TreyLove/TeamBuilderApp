@@ -10,6 +10,6 @@ This is a node js application that allows managers to create an html page that g
 3. Answers the prompts you are presented with
 4. When all the prompts are answered go the the generated profile folder and you will find your dynamically built team profile page.
 
-![Example Image](./images/example.png)
+![Example Image](./images/example.PNG)
 
 
