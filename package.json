@@ -1,14 +1,31 @@
 {
-  "name": "static-site",
+  "name": "TeamBuilderApp",
   "version": "1.0.0",
-  "description": "",
+  "description": "This is a node js application that allows managers to create an html page that gives a variety of information for each member of their team. Some of this info includes their names, employee IDs, roles, emails, office numbers, schools and gitHub profiles. The current roles supported are Managers, Engineers and Interns.",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "directories": {
+    "lib": "lib",
+    "test": "tests"
   },
+  "dependencies": {
+    "fs": "0.0.1-security",
+    "inquirer": "^8.0.0"
+  },
+  "devDependencies": {
+    "jest": "^26.6.3"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TreyLove/TeamBuilderApp.git"
+  },
+  "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "inquirer": "^6.3.1"
-  }
+  "bugs": {
+    "url": "https://github.com/TreyLove/TeamBuilderApp/issues"
+  },
+  "homepage": "https://github.com/TreyLove/TeamBuilderApp#readme"
 }
