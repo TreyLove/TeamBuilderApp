@@ -10,12 +10,20 @@ header {
     justify-content: center;
     align-items: center;
 }
+img{
+    max-width: 70px;
+    position: absolute;
+    right : 30px;
+    top: 20px;
+    
+}
 h2{
     padding-left: 20px;
 }
 li{
     font-size: 20px;
     list-style: none;
+    margin-top: 7px;
     
 }
 
@@ -28,14 +36,15 @@ li{
 }
 
 .card{
-    background-color: blanchedalmond;
+    background-color: rgb(228, 209, 209);
     display: flex;  
     flex-direction: column ;
-    align-items: center;
+    
     width: 400px;
     height: 250px;
     border-radius: 10px;
     margin: 30px;
+    position: relative;
     
 
 }
