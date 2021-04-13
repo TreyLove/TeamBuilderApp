@@ -1,4 +1,4 @@
-//const { test, expect } = require("@jest/globals");
+
 const { expect, test } = require("@jest/globals");
 const Employee = require("../lib/employee.js");
 

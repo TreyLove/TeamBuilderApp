@@ -17,7 +17,7 @@ test('logs proper email when called', () => {
 
 test('logs proper position when called', () => {
     manager = new Manager()
-    expect(manager.getPosition()).toBe("Manager")
+    expect(manager.getPosition()).toBe('Manager')
 })
 
 test('logs office number when called', () => {
