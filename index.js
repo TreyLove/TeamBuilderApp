@@ -1,10 +1,11 @@
+// Dependencies
 const fs = require("fs")
 const inquirer = require('inquirer');
 
 let managerArray = []
 let engArray = []
 let intArray = []
-
+// Employee classes
 class Employee {
     constructor(name, id, email, position) {
         this.name = name;
@@ -62,7 +63,7 @@ class Intern extends Employee {
         return this.school;
     }
 }
-
+// function for making the template literals from the user input
 const template = (manager, engineer, intern) => {
     const htmlStart = `
     <!DOCTYPE html>
@@ -82,6 +83,7 @@ const template = (manager, engineer, intern) => {
     </header>
     <div id="card-cont">
     `
+    // add start of html file
     let finTemp = [htmlStart]
     managerArray.forEach(e => {
         let cardTemp = `
@@ -145,6 +147,7 @@ const template = (manager, engineer, intern) => {
 
 
     });
+    // adds closing statements of the html file
     let htmlEnd = `
        </div>
     </body>
@@ -154,6 +157,7 @@ const template = (manager, engineer, intern) => {
     finTemp.push(htmlEnd)
     return finTemp
 }
+// function to write template literals to the html page
 const writeHtml = (tempArray) => {
 
     tempArray.forEach(e => {
@@ -164,7 +168,7 @@ const writeHtml = (tempArray) => {
     });
 
 }
-
+// prompt for the manager position
 const promptMan = async () => {
     return await inquirer.prompt([
         {
@@ -192,7 +196,7 @@ const promptMan = async () => {
     ])
 
 };
-
+// prompt for engineer position
 const promptEng = async () => {
     return await inquirer.prompt([
         {
@@ -220,7 +224,7 @@ const promptEng = async () => {
 
 
 };
-
+// prompt for the intern position
 const promptInt = async () => {
     return await inquirer.prompt([
         {
@@ -246,7 +250,7 @@ const promptInt = async () => {
 
     ])
 };
-
+// prompt to choose next job position
 const promptType = async () => {
     return await inquirer.prompt([
         {
@@ -257,7 +261,7 @@ const promptType = async () => {
         },
     ])
 }
-
+// gets run upon opening in node
 init = async () => {
 
     const manInfo = await promptMan()
@@ -267,7 +271,7 @@ init = async () => {
     managerArray.push(manager)
     console.log(manager)
 
-
+    // lets the user continue to choose more employees until they choose the option teamfinished
     let boolean = true
     while (boolean === true) {
         const empChoice = await promptType()
@@ -295,9 +299,10 @@ init = async () => {
     //console.log(manager)
     //console.log(engArray);
     //console.log(intArray);
-
+    // makes a template based off of user input
     const finalTemp = template(managerArray, engArray, intArray)
     //console.log(template(managerArray, engArray, intArray))
+    // writes html file
     writeHtml(finalTemp)
     console.log('Check in the generatedProfile folder to find your completed team profile')
 
